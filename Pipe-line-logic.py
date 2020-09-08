@@ -51,7 +51,7 @@ def PLinfo(request):
                 countPlaytime_forever = countPlaytime_forever + int(dataGetOwnedGames['response']['games'][i]['playtime_forever'])
             total_hours_all = countPlaytime_forever // 60
 
-            _heapify_max(L)
+            L.sort(reverse=True)
 
             Favorite_games = []
             Favorite_games_imgurl = []
