@@ -1,0 +1,441 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{% static '/Home/css/homepage.css' %}" defer />
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Quantico:ital@1&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/085d385585.js" crossorigin="anonymous"></script>
+
+  <style defer>
+    .slide_one_content {
+      background-image: url(/static/Home/Images/BeatBox3x2.png);
+      height: 400px;
+      width: 600px;
+      background-size: cover;
+    }
+
+    .slide_two_content {
+      background-image: url(/static/Home/Images/pipeline_preview_3x2.png);
+      height: 400px;
+      width: 600px;
+      background-size: cover;
+    }
+
+    .slide_three_content {
+      background-image: url(/static/Home/Images/TaskApp3x2.png);
+      height: 400px;
+      width: 600px;
+      background-size: cover;
+    }
+
+    @media (max-width: 600px) {
+      .slide_one_content {
+        background-image: url(/static/Home/Images/BeatBox2x2.png);
+        background-size: cover;
+        height: 400px;
+        width: 450px;
+      }
+
+      .slide_two_content {
+        background-image: url(/static/Home/Images/pipeline_preview_2x2.png);
+        background-size: contain;
+        height: 400px;
+        width: 450px;
+      }
+
+      .slide_three_content {
+        background-image: url(/static/Home/Images/TaskApp2x2.png);
+        background-size: contain;
+        height: 400px;
+        width: 450px;
+      }
+    }
+
+    .icon_one {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 2.7s;
+      background-image: url(/static/Home/Images/python_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_two {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 2.9s;
+      background-image: url(/static/Home/Images/django_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_three {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 3.1s;
+      background-image: url(/static/Home/Images/javascript_logo.png);
+      background-size: cover;
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_four {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 3.3s;
+      background-image: url(/static/Home/Images/react_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_five {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 3.5s;
+      background-image: url(/static/Home/Images/mysql_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_six {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 3.7s;
+      background-image: url(/static/Home/Images/html_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_seven {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 3.9s;
+      background-image: url(/static/Home/Images/css_icon.png);
+      background-size: cover;
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_eight {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 4.1s;
+      background-image: url(/static/Home/Images/bootstrap_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_nine {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 4.3s;
+      background-image: url(/static/Home/Images/cpp_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_ten {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 4.5s;
+      background-image: url(/static/Home/Images/git_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_eleven {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 4.7s;
+      background-image: url(/static/Home/Images/algo_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_twelve {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 4.9s;
+      background-image: url(/static/Home/Images/linux_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    .icon_thirteen {
+      position: relative;
+      animation-name: icon_left_animation;
+      animation-duration: 5.1s;
+      background-image: url(/static/Home/Images/spanish_icon.png);
+      width: 24px;
+      height: 24px;
+      margin-bottom: 2px;
+    }
+
+    @keyframes icon_left_animation {
+      from {
+        left: 100px;
+      }
+
+      to {
+        left: 0px;
+      }
+    }
+  </style>
+  <title>My Projects</title>
+</head>
+
+<body style="background-image: url(/static/Home/Images/homepage_background.jpg)" onload="myProjectsclick()">
+  <div class="main_grid_wrapper">
+    <div class="About_me_wrapper" onmouseover="aboutMein()" onmouseout="aboutMeout()"
+      onclick="aboutMeclick();skill_animation_caller();">
+      About me
+    </div>
+    <div class="My_Projects_wrapper" onclick="myProjectsclick()">
+      My Projects
+    </div>
+    <div class="Contact_me_wrapper" onmouseover="contactMein()" onmouseout="contactMeout()" onclick="contactMeclick()">
+      Contact me
+    </div>
+  </div>
+  <hr class="line_thing" />
+  <div class="My_projects_content_wrapper">
+    <div class="My_projects_content">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="slide_one_content">
+              <a href="/beatbox/" target="_blank">
+                <div class="link_to_code">
+                  <i class="fas fa-external-link-alt fa-2x link_icon_one"></i>
+                </div>
+              </a>
+              <div class="slide_about" onclick="description_beatbox()">
+                <i class="far fa-question-circle fa-2x questionmark_icon_one"></i>
+              </div>
+              <div class="description_beatbox_dropdown">
+                <div class="description__description">BeatBox is a fully functional social platform that allows
+                  you to create update and delete your posts, like other peoples posts, and even change your profile
+                  picture! *JQuery Waypoints + Django Paganation for infinite scrolling. </div>
+                <div class="title_techUsed">Tech Used</div>
+                <div class="description_beatbox_techUsed">Django-JS-HTML-CSS-MySql-AWS(S3)-jquery</div>
+              </div>
+            </div>
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="slide_two_content">
+              <div class="link_to_code">
+                <a href="/pipeline/" target="_blank"><i class="fas fa-external-link-alt fa-2x link_icon_two"></i></a>
+              </div>
+              <div class="slide_about" onclick="description_pipeline()">
+                <i class="far fa-question-circle fa-2x questionmark_icon_two"></i>
+              </div>
+              <div class="description_pipeline_dropdown">
+                <div class="description__description">PipeLine is an application that uses Steams Web Api to
+                  deliver an info/stats card for the user. You simply put your steam ID in 64bit or Vanity format.</div>
+                <div class="title_techUsed">Tech Used</div>
+                <div class="description_pipeline_techUsed">Django-JS-HTML-CSS-SteamAPI</div>
+              </div>
+            </div>
+            <div class="carousel-caption d-none d-md-block"></div>
+          </div>
+          <div class="carousel-item">
+            <div class="slide_three_content">
+              <div class="link_to_code">
+                <a href="/taskapp/" target="_blank"><i class="fas fa-external-link-alt fa-2x link_icon_two"></i></a>
+              </div>
+              <div class="slide_about" onclick="description_taskapp()">
+                <i class="far fa-question-circle fa-2x questionmark_icon_two"></i>
+              </div>
+              <div class="description_taskapp_dropdown">
+                <div class="description__description">TaskApp is an app that allows the user to have a personal
+                  task list that only they can view. Just make a user or login and start making your tasks</div>
+                <div class="title_techUsed">Tech Used</div>
+                <div class="description_taskapp_techUsed">Django-React-JS-CSS-HTML-RESTApi-MySql</div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-caption d-none d-md-block"></div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+
+        </a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="About_me_content_wrapper">
+    <div class="About_me_content">
+      <div class="skills_wrapper">
+        <div class="skills_title">My Skills</div>
+        <div class="skill_python rounded-left">
+          Python
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_django rounded-left">
+          Django
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_javascript rounded-left">
+          Javascript
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_react rounded-left">
+          React
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_sql rounded-left">
+          SQL / MySQL
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_html rounded-left">
+          Html
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_css rounded-left">
+          css
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_bootstrap rounded-left">
+          Bootstrap
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_cpp rounded-left">
+          C++
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_git rounded-left">
+          Git
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_algorithms rounded-left">
+          Algorithms
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_webserver_setup rounded-left">
+          Server Setup-linux
+          <div class="arrow-right"></div>
+        </div>
+        <div class="skill_spanish rounded-left">
+          Fluent Spanish
+          <div class="arrow-right"></div>
+        </div>
+      </div>
+      <div class="ball_anim_wrapper">
+        <div class="ball_anim_ball"></div>
+      </div>
+      <div class="summary_icon_wrapper">
+        <div class="icons_wrapper">
+          <div style="height: 36px"></div>
+          <div class="icon_one"></div>
+          <div class="icon_two"></div>
+          <div class="icon_three"></div>
+          <div class="icon_four"></div>
+          <div class="icon_five"></div>
+          <div class="icon_six"></div>
+          <div class="icon_seven"></div>
+          <div class="icon_eight"></div>
+          <div class="icon_nine"></div>
+          <div class="icon_ten"></div>
+          <div class="icon_eleven"></div>
+          <div class="icon_twelve"></div>
+          <div class="icon_thirteen"></div>
+        </div>
+        <div class="summary_wrapper">
+          <div class="github_aboutme_link_wrapper">
+            <div class="github_aboutme_link">
+              <a href="https://github.com/Grub1000" target="_blank"><i
+                  class="fab fa-github fa-4x github_aboutme_icon"></i></a>
+            </div>
+          </div>
+          <div class="linkedin_aboutme_link_wrapper">
+            <div class="linkedin_aboutme_link">
+              <a href="https://www.linkedin.com/in/jorge-ramirez-02363a18b/" target="_blank">
+                <i class="fab fa-linkedin fa-4x linkedin_aboutme_icon"></i></a>
+            </div>
+          </div>
+          <div class="summmary_of_me p-3" style="font-family: 'Quantico', sans-serif">
+            I am a fullstack web developer based in Orange County CA. My
+            talents are in problem solving and fast implementation of my
+            ideas. I work hard to recieve and maintain the information I learn
+            throughout my journey as an engineer.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Contact_me_content_wrapper">
+    <div class="Contact_me_content">
+      <div class="contact_content_wrapper">
+        <div class="contact_email">
+          <div class="arrow-right"></div>
+          <div style="padding-left: 17px">
+            <a onclick="email_show()" href="#"><i class="fas fa-envelope fa-2x contact_email_icon"></i></a>
+          </div>
+          <div class="arrow-left"></div>
+        </div>
+        <div class="contact_linkedin">
+          <div class="arrow-right"></div>
+          <div style="padding-left: 17px">
+            <a href="https://www.linkedin.com/in/jorge-ramirez-02363a18b/" target="_blank"><i
+                class="fab fa-linkedin fa-2x contact_linkedin_icon"></i></a>
+          </div>
+          <div class="arrow-left"></div>
+        </div>
+      </div>
+      <form action="/" method="POST">
+        {% csrf_token %}
+        <div class="form-group contact_msg_wrapper">
+          <textarea name="message" cols="82" rows="5" class="contact_msg form-control text-light col-10"
+            placeholder="Send me a Message! ~ Feeds directly to my email :)" maxlength="300"></textarea>
+          <input type="Submit" value="Send" class="form_control col-10 contact_submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+  {% if MessageSend %}
+  <script type="text/javascript">
+    setTimeout(() => {
+      alert("{{Message}}");
+    }, 2000);
+  </script>
+  {% endif %}
+  <script src="/static/Home/js/homepage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

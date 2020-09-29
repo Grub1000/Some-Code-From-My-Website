@@ -1,0 +1,244 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeatBox</title>
+  <link rel="stylesheet" href="/static/BeatBox/css/BeatBox.css" />
+  <script src="https://kit.fontawesome.com/085d385585.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Days+One&family=Didact+Gothic&display=swap" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    body {
+      /* background-color: rgb(70, 70, 70); */
+      background-image: url(/static/BeatBox/Images/BeatBoxBackground.png);
+      background-size: cover;
+      justify-content: center;
+    }
+
+    .Image_Input {
+      background-image: url(/static/BeatBox/Images/plus-icon-darkblue.png);
+    }
+
+    .Image_Input:hover {
+      cursor: pointer;
+      background-image: url(/static/BeatBox/Images/plus-icon-blue.png);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="Main_Wrapper infinite-container">
+    <div class="Nav_Left_Wrapper">
+      {% if user.is_anonymous%}
+      <div class="Nav_Buttons_Wrapper">
+        <a href="/accounts/login/">
+          <div class="Create_Post_Button" onclick="CreateDropDownOpen()">
+            <div class="Create_Post_Icon">
+              <i class="fas fa-plus fa-2x"></i>
+            </div>
+            <div class="Create_Post_Txt">NEW POST</div>
+          </div>
+        </a>
+        <a href="/accounts/login/">
+          <div class="Profile_Button">
+            <div class="Profile_Button_Icon">
+              <i class="fas fa-user-circle fa-2x"></i>
+            </div>
+            <div class="Profile_Button_Txt">PROFILE</div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="Home_Button">
+            <div class="Home_Button_Icon">
+              <i class="fas fa-home fa-2x"></i>
+            </div>
+            <div class="Home_Button_Txt">HOME</div>
+          </div>
+        </a>
+        <a href="/accounts/login/">
+          <div class="Signout_Button">
+            <div class="Signout_Button_Icon">
+              <i class="fas fa-sign-out-alt fa-2x"></i>
+            </div>
+            <div class="Signout_Button_Txt">SIGN OUT</div>
+          </div>
+        </a>
+      </div>
+      {% endif %} {% if user.is_authenticated %}
+      <div class="Nav_Buttons_Wrapper">
+        <div class="Create_Post_Button" onclick="CreateDropDownOpen()">
+          <div class="Create_Post_Icon">
+            <i class="fas fa-plus fa-2x"></i>
+          </div>
+          <div class="Create_Post_Txt">NEW POST</div>
+        </div>
+        <a href="/beatbox/profile/">
+          <div class="Profile_Button">
+            <div class="Profile_Button_Icon">
+              <i class="fas fa-user-circle fa-2x"></i>
+            </div>
+            <div class="Profile_Button_Txt">PROFILE</div>
+          </div>
+        </a>
+        <a href="#">
+          <div class="Home_Button">
+            <div class="Home_Button_Icon">
+              <i class="fas fa-home fa-2x"></i>
+            </div>
+            <div class="Home_Button_Txt">HOME</div>
+          </div>
+        </a>
+        <a href="/accounts/logout/">
+          <div class="Signout_Button">
+            <div class="Signout_Button_Icon">
+              <i class="fas fa-sign-out-alt fa-2x"></i>
+            </div>
+            <div class="Signout_Button_Txt">SIGN OUT</div>
+          </div>
+        </a>
+      </div>
+      {% endif %}
+    </div>
+    <div class="Nav_Right_Wrapper"></div>
+    {% if user.is_anonymous%}
+    <div class="User_Credentials_Wrapper">
+      <a href="/accounts/register/">
+        <div class="Sign_Up_Button">Sign up</div>
+      </a>
+      <a href="/accounts/login/">
+        <div class="Login_Button">Login</div>
+      </a>
+    </div>
+    {% endif %} {% if user.is_authenticated%}
+    <div class="User_Credentials_Wrapper" style="background-color: transparent"></div>
+    {% endif %} {% if user.is_anonymous%}
+    <div class="Mobile_Footer" style="top: 41px">
+      <a href="/accounts/login/" style="color: inherit">
+        <div class="Mobile_Create_Icon_Wrapper" onclick="CreateDropDownOpen()">
+          <i class="fas fa-plus fa-2x Mobile_Create_Icon"></i>
+        </div>
+      </a>
+      <a href="/accounts/login/" style="color: inherit">
+        <div class="Mobile_Profile_Icon_Wrapper">
+          <i class="fas fa-user-circle fa-2x Mobile_Profile_Icon"></i>
+        </div>
+      </a>
+      <a href="#" style="color: inherit">
+        <div class="Mobile_Home_Icon_Wrapper">
+          <i class="fas fa-home fa-2x Mobile_Home_Icon"></i>
+        </div>
+      </a>
+      <a href="/accounts/login/" style="color: inherit">
+        <div class="Mobile_Signout_Icon_Wrapper">
+          <i class="fas fa-sign-out-alt fa-2x Mobile_Signout_Icon"></i>
+        </div>
+      </a>
+    </div>
+    {% endif %} {%if user.is_authenticated%}
+    <div class="Mobile_Footer" style="top: 0px">
+      <div class="Mobile_Create_Icon_Wrapper" onclick="CreateDropDownOpen()">
+        <i class="fas fa-plus fa-2x Mobile_Create_Icon"></i>
+      </div>
+
+      <a href="/beatbox/profile/" style="color: inherit">
+        <div class="Mobile_Profile_Icon_Wrapper">
+          <i class="fas fa-user-circle fa-2x Mobile_Profile_Icon"></i></div>
+      </a>
+      <a href="#" style="color: inherit">
+        <div class="Mobile_Home_Icon_Wrapper">
+          <i class="fas fa-home fa-2x Mobile_Home_Icon"></i></div>
+      </a>
+      <a href="/accounts/logout/" style="color: inherit">
+        <div class="Mobile_Signout_Icon_Wrapper">
+          <i class="fas fa-sign-out-alt fa-2x Mobile_Signout_Icon"></i></div>
+      </a>
+    </div>
+    {% endif %} {% if user.is_authenticated %}
+    <div class="Create_Post_Dropdown">
+      <div class="Main_Create_Post_Exit_Button" onclick="CreateDropDownExit()">
+        <i class="fas fa-times fa-2x"></i>
+      </div>
+      <form action="/beatbox/post/new/" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input class="Content_Input" name="Content" type="text" placeholder="Type your message here" maxlength="300" />
+        <div class="Flex_Inputs">
+          <input class="Image_Input" name="Image" type="file" accept="image/png, image/jpeg" />
+          <input type="Submit" value="Post" class="Submit_Post_Input" />
+        </div>
+      </form>
+    </div>
+    {% endif %} {% for post in page_obj %}
+    <div class="Post_Content_Wrapper infinite-item">
+      <div class="Post_HeaderContent_wrapper">
+        <div class="Post_Info_Wrapper">
+          <div class="Post_Avatar" style="background-image: url({{post.author.profile.image.url}})"></div>
+          <div class="Post_Username">{{post.author.username}}</div>
+          <div class="Post_Time">{{post.postHasMountedTime}}</div>
+        </div>
+        {% if current_user.username == post.author.username %}
+        <div class="Post_Options_Wrapper">
+          <div class="Post_Options">
+            <a href="/beatbox/post/edit/{{post.id}}">
+              <i class="far fa-edit fa-2x Post_Edit"></i>
+            </a>
+            <a href="/beatbox/post/delete/{{post.id}}"><i class="fas fa-trash-alt fa-2x Post_Delete"></i></a>
+          </div>
+        </div>
+        {% else %}
+        <div class="Post_Options_Dropdown" style="width: 0px; height: 0px"></div>
+        {% endif %}
+      </div>
+      <div class="Post_Content">
+        {{post.content}}
+        <div class="Post_Img_Wrapper">
+          <img src="{{post.image.url}}" alt="" class="Post_Img" />
+        </div>
+      </div>
+      {% if current_user in post.users_whomst_liked.all %}
+      <div class="Post_Like_Icon_Wrapper">
+        <i class="fas fa-heart Post_Like_Icon" style="color: rgb(253, 66, 66);"></i>
+        <div class="Post_Like_Amount" style="font-size: 12px; color: ivory; float: right">
+          {{post.likes}}
+        </div>
+      </div>
+      {% elif user.is_authenticated %}
+      <div class="Post_Like_Icon_Wrapper">
+        <i class="fas fa-heart Post_Like_Icon"
+          onclick="addToMemory({{post.id}});addToTempCount({{post.id}}, {{post.likes}})"></i>
+        <div class="Post_Like_Amount" style="font-size: 12px; color: ivory; float: right" id={{post.id}}>
+          {{post.likes}}
+        </div>
+      </div>
+      {% else %}
+      <div class="Post_Like_Icon_Wrapper">
+        <i class="fas fa-heart Post_Like_Icon"></i>
+        <div class="Post_Like_Amount" style="font-size: 12px; color: ivory; float: right" id={{post.id}}>
+          {{post.likes}}
+        </div>
+      </div>
+      {% endif%}
+    </div>
+    {% endfor %} {% if page_obj.has_next %}
+    <a class="infinite-more-link" href="?page={{ page_obj.next_page_number }}"></a>
+    {% endif %}
+  </div>
+  <script src="/static/BeatBox/js/BeatBox.js"></script>
+  <script src="/static/js/jquery.waypoints.min.js"></script>
+  <script src="/static/js/infinite.min.js"></script>
+  <script>
+    var infinite = new Waypoint.Infinite({
+      element: $(".infinite-container")[0],
+
+      offset: "bottom-in-view",
+
+      onBeforePageLoad: function () { },
+
+      onAfterPageLoad: function () { },
+    });
+  </script>
+</body>
+
+</html>
