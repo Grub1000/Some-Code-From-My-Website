@@ -1,0 +1,638 @@
+a {
+  display: block;
+}
+.Main_Wrapper {
+  /* background-color: rgb(255, 123, 47); */
+  margin: auto;
+  width: 1100px;
+  /* height: 100vh; */
+  /* overflow: auto; */
+  margin-top: -8px;
+  /* overflow-x: hidden; */
+  
+}
+.Nav_Left_Wrapper {
+  position: sticky;
+  top: 0px;
+  width: 249px;
+  height: 100vh;
+  float: left;
+  border-right: rgba(87, 221, 221, 0.3) 1px solid;
+}
+.Nav_Buttons_Wrapper{
+  /* background-color: rgba(119, 119, 119, 0.3); */
+  position: relative;
+  top: 100px;
+  width: 100%;
+}
+.Create_Post_Button{
+  position: relative;
+  /* background-color: cornflowerblue; */
+  color: rgb(219, 255, 255);
+  width: 180px;
+  height: 30px;
+  margin: auto;
+  margin-bottom: 100px;
+  transition: color .4s ease;
+}
+.Create_Post_Button:hover{
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.Create_Post_Icon{
+  /* background-color: darkorchid; */
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.Create_Post_Txt{
+  font-family: 'Days One', sans-serif;
+  /* color: deeppink; */
+  position: relative;
+  /* background: rgb(238, 155, 187); */
+  float: right;
+  top: 5px;
+  height: 20px;
+  width: 100px;
+  margin-right: 25px;
+}
+.Profile_Button{
+  position: relative;
+  /* background-color: cyan; */
+  color: rgb(219, 255, 255);
+  width: 180px;
+  height: 30px;
+  margin: auto;
+  margin-bottom: 100px;
+  transition: color .4s ease;
+}
+.Profile_Button:hover{
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.Profile_Button_Icon{
+  /* background-color: darkorchid; */
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.Profile_Button_Txt{
+  font-family: 'Days One', sans-serif;
+  /* color: deeppink; */
+  position: relative;
+  /* background: rgb(238, 155, 187); */
+  float: right;
+  top: 5px;
+  height: 20px;
+  width: 80px;
+  margin-right: 45px;
+}
+.Home_Button{
+  position: relative;
+  /* background-color: darkcyan; */
+  color: rgb(219, 255, 255);
+  width: 180px;
+  height: 30px;
+  margin: auto;
+  margin-bottom: 100px;
+  transition: color .4s ease;
+}
+.Home_Button:hover{
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.Home_Button_Icon{
+  /* background-color: darkorchid; */
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.Home_Button_Txt{
+  font-family: 'Days One', sans-serif;
+  /* color: deeppink; */
+  position: relative;
+  /* background: rgb(238, 155, 187); */
+  float: right;
+  top: 5px;
+  height: 20px;
+  width: 55px;
+  margin-right: 70px;
+}
+.Signout_Button{
+  position: relative;
+  /* background-color: darkcyan; */
+  color: rgb(219, 255, 255);
+  width: 180px;
+  height: 30px;
+  margin: auto;
+  margin-bottom: 100px;
+  transition: color .4s ease;
+}
+.Signout_Button:hover{
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+.Signout_Button_Icon{
+  /* background-color: rgb(230, 198, 91);
+  color: aqua; */
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+.Signout_Button_Txt{
+  font-family: 'Days One', sans-serif;
+  /* color: deeppink; */
+  position: relative;
+  /* background: rgb(238, 155, 187); */
+  float: right;
+  top: 5px;
+  height: 20px;
+  width: 89px;
+  margin-right: 36px;
+}
+/* .Test_Img {
+  position: relative;
+  margin: auto;
+  width: 24px;
+  height: 24px;
+  top: 10%;
+  background-image: url(/Images/linux_icon.png);
+} */
+.Nav_Right_Wrapper {
+  /* background-color: rgba(115, 116, 116, 0.1); */
+  position: sticky;
+  top: 0px;
+  width: 249px;
+  height: 100vh;
+  float: right;
+  border-left: rgba(87, 221, 221, 0.1) 1px solid;
+}
+.User_Credentials_Wrapper{
+  z-index: 99 !important;
+  background-color: rgba(219, 255, 255, 0.103);
+  position: sticky;
+  top: 0px;
+  width: 600px;
+  height: 40px;
+  margin: auto;
+  border-top: rgba(87, 221, 221, 0.3) 1px solid;
+  
+}
+.Sign_Up_Button{
+  /* background-color: rgb(0, 0, 0); */
+  font-family: 'Days One', sans-serif;
+  font-size: larger;
+  color: rgb(219, 255, 255);
+  float: left;
+  margin-left: 200px;
+  margin-top: 7px;
+  transition: color .4s ease;
+}
+.Sign_Up_Button:hover{
+  color: rgb(250, 173, 8);
+}
+.Login_Button{
+  /* background-color: rgb(0, 0, 0); */
+  font-family: 'Days One', sans-serif;
+  font-size: larger;
+  color: rgb(219, 255, 255);
+  float: right;
+  margin-right: 200px;
+  margin-top: 7px;
+  transition: color .4s ease;
+}
+.Login_Button:hover{
+  color: rgb(43, 255, 0);
+}
+.Create_Post_Dropdown{
+  z-index: 99 !important;
+  display: none;
+  position: sticky;
+  top: 41px;
+  height: 200px;
+  width: 400px;
+  margin: auto;
+  background-color: rgb(104, 195, 238);
+}
+.Main_Create_Post_Exit_Button{
+  width: 26px;
+  height: 26px;
+  color: rgb(56, 165, 228);
+  float: right;
+  transition: color .4s ease;
+}
+.Main_Create_Post_Exit_Button:hover{
+  cursor: pointer;
+  color: rgb(218, 89, 89);
+}
+.Content_Input{
+  border: 5px solid rgb(214, 242, 255); 
+  box-shadow: 
+  20px 20px 20px rgba(100, 206, 255, 0.432) inset,
+  -20px -20px 20px rgba(100, 206, 255, 0.432) inset;
+  margin-left: 18px;
+  margin-top: 25px;
+  width: 350px;
+  height: 50px;
+  outline: none;
+}
+.Flex_Inputs{
+  display: flex;
+}
+.Image_Input::-webkit-file-upload-button{
+  visibility: hidden;
+}
+.Image_Input{
+  /* background-color: rgba(170, 120, 219, 0.26); */
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  margin-left: 18px;
+  margin-top: 25px;
+  border: none;
+  outline: none;
+}
+.Submit_Post_Input{
+  font-family: 'Days One', sans-serif;
+  color: rgb(19, 115, 194);
+  box-shadow: 
+  20px 20px 20px rgba(100, 206, 255, 0.432) inset,
+  -20px -20px 20px rgba(100, 206, 255, 0.432) inset;
+  width: 100px;
+  height: 50px;
+  margin-top: 25px;
+  margin-left: 200px;
+  border: 2px solid white;
+}
+.Submit_Post_Input:hover{
+  cursor: pointer;
+  color: rgb(32, 173, 39);
+}
+.Post_Content_Wrapper {
+  margin: auto;
+  /* background-color: rgb(114, 113, 112); */
+  width: 600px;
+  min-height: 100px;
+  border-top: rgba(87, 221, 221, 0.3) 1px solid;
+}
+.Post_HeaderContent_wrapper {
+  /* background-color: rgb(114, 113, 112); */
+  height: 50px;
+  width: 600px;
+}
+.Post_Info_Wrapper {
+  /* background-color: seagreen; */
+  float: left;
+  display: flex;
+  width: 550px;
+  height: 50px;
+}
+.Post_Avatar {
+  /* background-color: rgb(228, 228, 228); */
+  margin: 2.5px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  /* background-image: url(/Images/8121_pepeStraightFace.png); */
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.Post_Username {
+  color: rgb(219, 255, 255);
+  /* background-color: rgb(250, 178, 115); */
+  font-family: 'Didact Gothic', sans-serif;
+  margin: 15px;
+  width: 110px;
+  height: 20px;
+}
+.Post_Time {
+  color: rgb(219, 255, 255);
+  /* background-color: rgb(223, 162, 247); */
+  font-family: 'Didact Gothic', sans-serif;
+  margin: 15px;
+  width: 100px;
+  height: 20px;
+}
+.Post_Options_Wrapper{
+  /* background-color: skyblue; */
+  float: right;
+  width: 50px;
+  height: 80px;
+}
+.Post_Options {
+  position: relative;
+  /* background-color: sandybrown; */
+  height: 80px;
+  width: 50px;
+}
+.Post_Edit{
+  position: relative;
+  top: 4px;
+  left: 10px;
+  color: rgb(219, 255, 255);
+}
+.Post_Edit:hover{
+  
+  color: black;
+}
+.Post_Delete{
+  position: relative;
+  left: 10px;
+  margin-top: 10px;
+  color: rgb(219, 255, 255);
+}
+.Post_Delete:hover{
+  color: black;
+}
+.Post_Content{
+  color: rgb(219, 255, 255);
+  font-family: 'Didact Gothic', sans-serif;
+  padding: 10px;
+}
+.Post_Img_Wrapper{
+  max-width: 300px;
+  max-height: 200px;
+  margin-top: 10px;
+}
+.Post_Img{
+  max-width: 300px;
+  max-height: 200px;
+}
+.Post_Like_Icon_Wrapper{
+  /* background-color: rgb(183, 0, 255); */
+  position: relative;
+  top: 0px;
+  width: 36px;
+  height: 20px;
+  margin: auto;
+  
+}
+.Post_Like_Icon{
+ color: rgb(219, 255, 255);
+  transition: color .5s ease;
+}
+.Post_Like_Icon:hover{
+  color: rgb(253, 66, 66);
+  cursor: pointer;
+}
+.Post_Like_Amount{
+  position: relative;
+}
+.Mobile_Footer {
+  display: none;
+  z-index: 99 !important;
+  /* background-color: rgba(214, 222, 224, 0.233); */
+  position: sticky;
+  top: 41px;
+  margin: auto;
+  width: 340px;
+  height: 70px;
+}
+.Mobile_Create_Icon_Wrapper{
+  height: 70px;
+  background-color: rgba(144, 238, 144, 0.705);
+}
+.Mobile_Create_Icon_Wrapper:hover{
+  cursor: pointer;
+  color: rgb(219, 255, 255);
+}
+.Mobile_Create_Icon{
+  position: relative;
+  left: 28px;
+  top: 30%
+}
+.Mobile_Profile_Icon_Wrapper{
+  height: 70px;
+  background-color: rgba(255, 255, 0, 0.705);
+}
+.Mobile_Profile_Icon_Wrapper:hover{
+  cursor: pointer;
+  color: rgb(219, 255, 255);
+}
+.Mobile_Profile_Icon{
+  position: relative;
+  left: 28px;
+  top: 30%
+}
+.Mobile_Home_Icon_Wrapper{
+  height: 70px;
+  background-color: rgba(0, 191, 255, 0.705);
+}
+.Mobile_Home_Icon_Wrapper:hover{
+  cursor: pointer;
+  color: rgb(219, 255, 255);
+}
+.Mobile_Home_Icon{
+  position: relative;
+  left: 26px;
+  top: 30%
+
+}
+.Mobile_Signout_Icon_Wrapper{
+  height: 70px;
+  background-color: rgba(240, 128, 128, 0.705);
+}
+.Mobile_Signout_Icon_Wrapper:hover{
+  cursor: pointer;
+  color: rgb(219, 255, 255);
+}
+.Mobile_Signout_Icon{
+  position: relative;
+  left: 28px;
+  top: 30%
+}
+@media (max-width: 1100px) {
+  .Main_Wrapper {
+    width: 800px;
+  }
+  .Nav_Left_Wrapper {
+    width: 199px;
+  }
+  .Nav_Right_Wrapper {
+    width: 199px;
+  }
+  .User_Credentials_Wrapper{
+    width: 400px;
+  }
+    .Sign_Up_Button{
+    margin-left: 100px;
+  }
+  .Login_Button{
+    
+    margin-right: 100px;
+    
+  }
+  .Post_Content_Wrapper {
+    width: 400px;
+  }
+  .Post_HeaderContent_wrapper {
+    width: 400px;
+  }
+  .Post_Info_Wrapper {
+    width: 350px;
+
+}
+@media (max-width: 800px) {
+  .Main_Wrapper {
+    width: 600px;
+  }
+  .Nav_Left_Wrapper {
+    width: 99px;
+  }
+  .Nav_Right_Wrapper {
+    width: 99px;
+  }
+  .User_Credentials_Wrapper{
+    width: 400px;
+  }
+  .Sign_Up_Button{
+    margin-left: 100px;
+  }
+  .Login_Button{
+    margin-right: 100px;
+  }
+  .Post_Content_Wrapper {
+    width: 400px;
+  }
+  .Post_HeaderContent_wrapper {
+    width: 400px;
+  }
+  .Post_Info_Wrapper {
+    width: 350px;
+  }
+  .Create_Post_Txt{
+    display: none;
+  }
+  .Create_Post_Button{
+    width: 30px;
+  }
+  .Profile_Button_Txt{
+    display: none;
+  }
+  .Profile_Button{
+    width: 30px;
+  }
+  .Home_Button_Txt{
+    display: none;
+  }
+  .Home_Button{
+    width: 30px;
+  }
+  .Signout_Button{
+    width: 30px;
+  }
+  .Signout_Button_Txt{
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .Main_Wrapper {
+    width: 450px;
+  }
+  .Create_Post_Dropdown{
+    width: 390px;
+    margin-right: .01%;
+  }
+  .Nav_Left_Wrapper {
+    width: 59px;
+  }
+  .Nav_Right_Wrapper {
+    display: none;
+  }
+  .User_Credentials_Wrapper{
+    margin-right: .01%;
+    width: 390px;
+  }
+    .Sign_Up_Button{
+    margin-left: 80px;
+  }
+  .Login_Button{
+    margin-right: 80px;
+  }
+  .Post_Content_Wrapper {
+    margin-right: .01% ;
+    width: 390px;
+  }
+  .Post_HeaderContent_wrapper {
+    width: 390px;
+  }
+  .Post_Info_Wrapper {
+    width: 339px;
+
+}
+}
+@media (max-width: 490px) {
+  .Main_Wrapper {
+    width: 340px;
+    /* height: 90vh; */
+  }
+  .User_Credentials_Wrapper{
+    /* display: none; */
+  }
+  .Create_Post_Dropdown{
+    margin: auto;
+    width: 340px;
+    top: 70px;
+  } 
+  .Content_Input{
+    width: 290px;
+  }
+  .Submit_Post_Input{
+    margin-left: 150px;
+  } 
+  .Nav_Left_Wrapper {
+    display: none;
+  }
+  .Nav_Right_Wrapper {
+    display: none;
+  }
+  .User_Credentials_Wrapper{
+    width: 340px;
+  }
+  .Post_Content_Wrapper {
+    margin: auto;
+    width: 340px;
+  }
+  .Post_HeaderContent_wrapper {
+    width: 340px;
+  }
+  .Post_Info_Wrapper {
+    width: 290px;
+
+}
+  .Mobile_Footer {
+    display: grid;
+    grid-template-columns: 85px 85px 85px 85px;
+  }
+}
+@media (max-height: 600px) {
+  .Nav_Buttons_Wrapper{
+    top: 10%;
+  }
+  .Create_Post_Button{
+    margin-bottom: 50px;
+  }
+  .Profile_Button{
+    
+    margin-bottom: 50px;
+  }
+  .Home_Button{
+    margin-bottom: 50px;
+  }
+}
+@media  (max-height: 300px){
+  .Nav_Buttons_Wrapper{
+    top: 5%;
+  }
+  .Create_Post_Button{
+    margin-bottom: 30px;
+  }
+  .Profile_Button{
+    
+    margin-bottom: 30px;
+  }
+  .Home_Button{
+    margin-bottom: 30px;
+  }
+}

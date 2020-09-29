@@ -1,0 +1,130 @@
+.info_wrapper {
+  background-color: rgb(36, 58, 104);
+  width: 450px;
+  height: 500px;
+  margin: auto;
+  margin-top: 150px;
+}
+.onlineoffline_dot {
+  /* background-color: chartreuse; */
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.top_left_avatar_wrapper {
+  /* background-color: crimson; */
+  width: 100px;
+  height: 90px;
+  float: left;
+}
+.top_right_info_wrapper {
+  /* background-color: rosybrown; */
+  height: 90px;
+  width: 350px;
+  float: right;
+}
+.exit_button {
+  /* background-color: crimson; */
+  float: right;
+  width: 25px;
+  height: 25px;
+}
+.top_right_info_pusher {
+  /* background-color: rgb(71, 177, 171); */
+  width: 350px;
+  height: 25px;
+}
+.top_right_info_alias {
+  /* background-color: sienna; */
+  height: 25px;
+  width: auto;
+  font-size: 150%;
+  color: rgb(255, 255, 255);
+  font-family: "Audiowide", cursive;
+}
+.top_right_info_total_hours {
+  /* background-color: sienna; */
+  height: 25px;
+  width: auto;
+  font-size: 150%;
+  color: rgb(255, 255, 255);
+  font-family: "Audiowide", cursive;
+}
+.middle_info {
+  /* background-color: rgb(207, 38, 199); */
+  color: antiquewhite;
+  height: 410px;
+  font-size: 150%;
+  font-family: "Audiowide", cursive;
+  clear: both;
+}
+.graph_wrapper {
+  height: 180px;
+  /* background-color: darkolivegreen; */
+  display: grid;
+  grid-template-columns: 40px 40px 40px;
+  overflow: hidden;
+  grid-column-gap: 20px;
+}
+.drop_down {
+  border-top: rgb(99, 117, 117) 1px solid;
+  padding-left: 150px;
+}
+.drop_down:hover {
+  cursor: pointer;
+  color: chartreuse;
+}
+.game1 {
+  animation-name: left_move;
+  animation-duration: 4s;
+  margin-left: -100px;
+  list-style: none;
+}
+.game2 {
+  animation-name: left_move;
+  animation-duration: 5s;
+  margin-left: -100px;
+  list-style: none;
+}
+.game3 {
+  animation-name: left_move;
+  animation-duration: 6s;
+  margin-left: -100px;
+  list-style: none;
+}
+.drop_down_content {
+  width: 100px;
+  height: 100px;
+  /* background-color: brown; */
+  width: 400px;
+  height: 200px;
+  color: rgb(89, 130, 146);
+  animation-name: left_move;
+  margin-top: 10px;
+  margin-left: -100px;
+  opacity: 100%;
+  animation-duration: 4s;
+}
+
+@keyframes left_move {
+  from {
+    opacity: 0;
+    margin-left: 0px;
+  }
+
+  to {
+    opacity: 100%;
+    margin-left: -100px;
+  }
+}
+@keyframes left_move_img {
+  from {
+    opacity: 0;
+    margin-right: 0px;
+  }
+
+  to {
+    opacity: 100%;
+    margin-right: -20px;
+  }
+}

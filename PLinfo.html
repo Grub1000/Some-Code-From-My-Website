@@ -1,0 +1,256 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/static/Pipeline/css/PLinfo.css" defer />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-image: url(/static/Pipeline/Images/pipeline_background.jpg);
+    }
+
+    .top_left_avatar {
+      background-image: url({{info.profile_img}});
+      background-size: cover;
+      margin-left: 5px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .img1 {
+      float: right;
+      animation-name: left_move_img;
+      animation-duration: 2s;
+      margin-right: -20px;
+      background-image: url({{info.F_game_one_icon}});
+      background-color: brown;
+      background-size: cover;
+      border: 1px solid rgb(103, 110, 116);
+      width: 30px;
+      height: 30px;
+    }
+
+    .img2 {
+      float: right;
+      animation-name: left_move_img;
+      animation-duration: 4s;
+      margin-right: -20px;
+      background-image: url({{info.F_game_two_icon}});
+      background-color: brown;
+      background-size: cover;
+      border: 1px solid rgb(103, 110, 116);
+      width: 30px;
+      height: 30px;
+    }
+
+    .img3 {
+      float: right;
+      animation-name: left_move_img;
+      animation-duration: 6s;
+      margin-right: -20px;
+      background-image: url({{info.F_game_three_icon}});
+      background-color: brown;
+      background-size: cover;
+      border: 1px solid rgb(103, 110, 116);
+      width: 30px;
+      height: 30px;
+    }
+
+    .link_profile {
+      background-image: url(/static/Pipeline/Images/link_pic1.png);
+      background-size: cover;
+
+      font-size: 44%;
+      float: right;
+      width: 25px;
+      height: 25px;
+      margin-right: 310px;
+    }
+
+    .graph1 {
+      animation-name: graph_one_up;
+      animation-duration: 3s;
+      background-image: url(/static/Pipeline/Images/graph.jpg);
+      /* display: inline-block; */
+      width: 40px;
+      height: 180px;
+      margin-left: 20px;
+      position: relative;
+      font-size: 35%;
+      color: black;
+      padding-left: 1px;
+
+      /* margin-top: 70px; */
+    }
+
+    .graph2 {
+      animation-name: graph_two_up;
+      animation-duration: 4s;
+      background-image: url(/static/Pipeline/Images/graph.jpg);
+      /* display: inline-block; */
+      width: 40px;
+      height: 180px;
+      margin-left: 20px;
+      position: relative;
+      font-size: 35%;
+      color: black;
+      padding-left: 1px;
+      /* margin-top: 100px; */
+    }
+
+    .graph3 {
+      animation-name: graph_three_up;
+      animation-duration: 5s;
+      background-image: url(/static/Pipeline/Images/graph.jpg);
+      /* display: inline-block; */
+      width: 40px;
+      height: 180px;
+      margin-left: 20px;
+      position: relative;
+      font-size: 35%;
+      color: black;
+      padding-left: 1px;
+      /* margin-top: 120px; */
+    }
+
+    @keyframes graph_one_up {
+      from {
+        margin-top: 180px;
+      }
+
+      to {
+          {
+            {
+            info.graph_one_move
+          }
+        }
+      }
+    }
+
+    @keyframes graph_two_up {
+      from {
+        margin-top: 180px;
+      }
+
+      to {
+          {
+            {
+            info.graph_two_move
+          }
+        }
+      }
+    }
+
+    @keyframes graph_three_up {
+      from {
+        margin-top: 180px;
+      }
+
+      to {
+          {
+            {
+            info.graph_three_move
+          }
+        }
+      }
+    }
+  </style>
+  <title>Info</title>
+</head>
+
+<body>
+  <div class="info_wrapper">
+    <div class="top_left_avatar_wrapper">
+      <div style="height: 5px;"></div>
+      {% if info.online %}
+      <div class="top_left_avatar" style="border: rgb(75, 241, 10) solid 3px;"></div>
+      {%endif%} {% if info.offline %}
+      <div class="top_left_avatar" style="border: rgb(100, 100, 100) solid 3px;"></div>
+      {%endif%} {% if info.away %}
+      <div class="top_left_avatar" style="border: rgb(218, 204, 20) solid 3px;"></div>
+      {%endif%}
+    </div>
+    <div class="top_right_info_wrapper">
+      <div class="top_right_info_pusher">
+        <a href="/pipeline">
+          <div class="exit_button"></div>
+        </a>
+      </div>
+      <div class="top_right_info_alias">
+        Alias : {{info.profile_name}}
+      </div>
+      <div class="top_right_info_total_hours">
+        Total Hours : {{info.total_hours}}
+      </div>
+    </div>
+    <div class="middle_info">
+      <div style="background-color: transparent; padding-left: 2px;">
+        Status : {{info.profile_status}}
+      </div>
+      <div style="background-color: transparent; padding-left: 2px;">
+        ID-64 : {{info.steamID}}
+      </div>
+      <div style="background-color: transparent; padding-left: 2px;">
+        Profile :
+        <a href="{{info.link_to_steam_prof}}">
+          <div class="link_profile"></div>
+        </a>
+      </div>
+      <div style="background-color: transparent; padding-left: 2px;">
+        Profile state : {{info.profile_state}}
+      </div>
+      <div style="background-color: transparent; padding-left: 2px;">
+        Created : {{info.profile_created}}
+      </div>
+      <div class="graph_wrapper">
+        <div class="graph1" style="{{info.graph_one_move}}">
+          {{info.F_game_one_hours}} h
+        </div>
+        <div class="graph2" style="{{info.graph_two_move}}">
+          {{info.F_game_two_hours}} h
+        </div>
+        <div class="graph3" style="{{info.graph_three_move}}">
+          {{info.F_game_three_hours}} h
+        </div>
+      </div>
+      <div class="drop_down" onclick="toggler()">
+        Your top 3
+        <div class="drop_down_content">
+          <div style="height: 7px;"></div>
+          <ul>
+            <li class="game1">
+              {{info.F_game_one}}
+              <div class="img1"></div>
+            </li>
+            <li class="game2">
+              {{info.F_game_two}}
+              <div class="img2"></div>
+            </li>
+            <li class="game3">
+              {{info.F_game_three}}
+              <div class="img3"></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="/static/Pipeline/js/PLinfo.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
