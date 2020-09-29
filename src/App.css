@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(177, 219, 217);
+}
+.MainWrapper {
+  width: 470px;
+  margin: auto;
+  position: relative;
+  top: 40px;
+}
+.FormDiv {
+  background-color: rgb(211, 153, 147);
+  width: 470px;
+  margin: auto;
+  padding: 5px;
+}
+.Form {
+  position: relative;
+  top: 7px;
+  display: flex;
+}
+.SubmitTask {
+  background-color: rgb(107, 165, 212);
+  margin-left: 5px;
+  width: 100px;
+  color: aliceblue;
+}
+.countWrapper {
+  background-color: rgb(211, 153, 147);
+  color: rgb(177, 219, 226);
+  width: 470px;
+  padding-left: 400px;
+}
+
+.TasksWrapper {
+  background-color: rgb(211, 153, 147);
+  margin: auto;
+  width: 470px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.Task {
+  background-color: rgb(154, 231, 221);
+}
+.Task {
+  display: flex;
+  margin-bottom: 3px;
+  padding: 6px;
+}
+.TaskTitle {
+  /* background-color: coral; */
+  padding-top: 7px;
+  font-size: larger;
+}
+.UpdateTask {
+  background-color: rgb(117, 231, 161);
+  margin-left: auto;
+  color: rgb(255, 255, 255);
+}
+.DeleteTask {
+  margin-left: 5px;
+  padding: 0px;
+  color: rgb(241, 0, 0);
+}
